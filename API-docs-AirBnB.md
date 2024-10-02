@@ -158,6 +158,7 @@ user's information.
 * Request
   * Method: POST
   * Route path: /api
+  <!-- /api/signup -->
   * Headers:
     * Content-Type: application/json
   * Body:
@@ -379,6 +380,7 @@ Creates and returns a new spot.
 * Request
   * Method: POST
   * Route path: /api/spots
+  <!-- /api/spot -->
   * Headers:
     * Content-Type: application/json
   * Body:
@@ -453,6 +455,11 @@ Create and return a new image for a spot specified by id.
 * Request
   * Method: POST
   * Route path: /api/spots/:id/spotImages
+
+  <!-- capitalization is not convention
+  /api/spots/:id/image(s)
+  also /api/spots/:id/:url
+  -->
   * Headers:
     * Content-Type: application/json
   * Body:
@@ -499,6 +506,7 @@ Updates and returns an existing spot.
 * Request
   * Method: PUT
   * Route path: /api/spots/:user
+  <!-- /api/spots/:id -->
   * Headers:
     * Content-Type: application/json
   * Body:
@@ -585,6 +593,9 @@ Deletes an existing spot.
 * Request
   * Method: DELETE
   * Route path: /api/spots/:id
+  <!-- deletes just has id
+  /api/:id
+   -->
   * Body: none
 
 * Successful Response
@@ -933,6 +944,8 @@ Delete an existing review.
 * Request
   * Method:  DELETE
   * Route path: /api/reviews/:id
+  <!-- /api/:id
+  but why?? not sure -->
   * Body: none
 
 * Successful Response
@@ -1164,6 +1177,9 @@ Update and return an existing booking.
 * Request
   * Method: PATCH
   * Route path: /api/bookings/:userId
+  <!-- do we need a booking a bookingId and userId?
+  what if user had multiple bookings?
+   -->
   * Headers:
     * Content-Type: application/json
   * Body:
@@ -1259,6 +1275,7 @@ Delete an existing booking.
 * Request
   * Method: DELETE
   * Route path: /api/bookings/:id
+  <!-- is the id the bookingId or userId? -->
   * Body: none
 
 * Successful Response
@@ -1308,6 +1325,7 @@ Delete an existing image for a Spot.
 * Request
   * Method: DELETE
   * Route path: /api/spots/:spotsId/:url
+  <!-- do we need user id? -->
   * Body: none
 
 * Successful Response
@@ -1343,6 +1361,7 @@ Delete an existing image for a Review.
 * Request
   * Method: DELETE
   * Route path: /api/reviews/:url
+  <!-- do we need reviewId? -->
   * Body: none
 
 * Successful Response
